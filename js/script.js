@@ -11,6 +11,8 @@ const jump = () => {
 
 const loop = setInterval(() => {
 
+    console.log('loop');
+
     const pipePosition = pipe.offsetLeft;
     const kratosPosition = +window.getComputedStyle(kratos).bottom.replace('px', '');
 
@@ -27,6 +29,8 @@ const loop = setInterval(() => {
         kratos.src = './images/kra.gif';
         kratos.style.width = '85px'
         kratos.style.marginLeft = '50px'
+
+        clearInterval(loop);
 
     }
 
